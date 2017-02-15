@@ -52,21 +52,16 @@
        "retrigger" : true
     });
     
-    var borat = document.getElementById("borat");
-    var button = document.getElementById("button);
-    borat.onclick = hand.ontouchstart = mouseActions;
-    button.onclick = button.ontouchstart = mouseActions;
-    
     var voice = new Tone.player({
-                "url" : "borat.mp3"
-                 "retrigger" : true
+                "url" : "borat.mp3",
+                 "trigger" : true
     });
     voice.connect(Tone.Master)                           
     slap.connect(Tone.Master);
 
     function mouseActions(event) {
         slap.start();
-        voice.start(0.2ms);
+        voice.start(0.2);
     }
     </script>
 
