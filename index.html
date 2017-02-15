@@ -61,11 +61,12 @@
                 "url" : "borat.mp3"
                  "retrigger" : true
     });
-                                         
+    voice.connect(Tone.Master)                           
     slap.connect(Tone.Master);
 
     function mouseActions(event) {
         slap.start();
+        voice.start();
     }
     </script>
 
