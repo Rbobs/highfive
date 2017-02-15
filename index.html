@@ -47,21 +47,22 @@
     hand.onclick = hand.ontouchstart = mouseActions;
     button.onclick = button.ontouchstart = mouseActions;
     
-    var slap = new Tone.Player({
+    var slap = new Tone.Player1({
        "url" : "slap.mp3",
        "retrigger" : true
     });
     
-    var voice = new Tone.player({
+    var voice = new Tone.Player2({
                 "url" : "borat.mp3",
-                 "trigger" : true
+                 "retrigger" : true
     });
+        
     voice.connect(Tone.Master)                           
     slap.connect(Tone.Master);
 
     function mouseActions(event) {
         slap.start();
-        voice.start(0.2);
+        voice.start();
     }
     </script>
 
